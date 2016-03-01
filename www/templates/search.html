@@ -1,0 +1,46 @@
+<ion-view view-title="Search For Beers">
+  <ion-content>
+    <div class="list list-inset">
+	  <label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input type="text" placeholder="Name" ng-model="form.name">
+	  </label>
+        
+        <label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input type="text" placeholder="Year" ng-model="form.name">
+	  </label>
+        
+      <li class="item item-toggle">
+      Light or Dark?
+      <label class="toggle toggle-balanced">
+        <input type="checkbox" ng-model= "form.isDark">
+         <div class="track">
+         <div class="handle">
+         </div>
+        </div>
+        Dark
+      </label>
+      </li>
+
+      <li class="item item-toggle">
+      Organic?
+      <label class="toggle toggle-balanced">
+        <input type="checkbox" ng-model= "form.isOrganic">
+         <div class="track">
+         <div class="handle">
+         </div>
+        </div>
+        Yes
+      </label>
+      </li>
+        
+        
+	</div>
+  </ion-content>
+
+	<div class="bar bar-footer bar-balanced" ng-click="search()">
+		<div class="title">Search</div>
+	</div>
+
+</ion-view>
