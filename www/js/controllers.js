@@ -45,6 +45,8 @@ angular.module('starter.controllers', [])
             $state.go('app.beers'); // go to the beer results state
         });
     }
+    
+    console.log("leaving SearchCtr");
 })
 
 .controller('BeersCtrl', function ($scope, BeerData) {
@@ -52,25 +54,7 @@ angular.module('starter.controllers', [])
     console.log("Made it to Beers Ctrl");
     
     
-    if (BeerData.data.totalResults>50 ){
-    BeerData.data.totalResults = 50;
-                        }                       // this should be updated to contain the beer data
-                                                    // this should be updated to contain the beer data
-    $scope.beerlist = [];
-  for (var i = 0; i<=BeerData.data.totalResults - 1; i++) {
-    if(!BeerData.data.data[i].labels)
-    {
-      BeerData.data.data[i].labels= "null";
-      console.log("no picture");
-    }
-        $scope.playlists.push({title:BeerData.data.data[i].nameDisplay, image:BeerData.data.data[i].labels,  id:i})
-         };  
-         console.log (i);
-
-    $scope.getInfo = function(item) {
-    beerDetails.data = item;
-    $state.go('app.details');
-  }
+   
     
 })
 
